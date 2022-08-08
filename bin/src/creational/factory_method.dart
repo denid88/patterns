@@ -75,8 +75,6 @@ class WebDialog implements Dialog {
   Button createButton() => HTMLButton();
 }
 
-
-
 /*
 * * https://refactoring.guru/ru/design-patterns/factory-method
 */

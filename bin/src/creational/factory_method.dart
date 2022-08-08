@@ -33,8 +33,9 @@ abstract class CoffeeProduct {}
 
 class Coffee implements CoffeeProduct {}
 class Cacao implements CoffeeProduct {}
+class Chicory implements CoffeeProduct {}
 
-enum CoffeeProductType {coffee, cacao}
+enum CoffeeProductType {coffee, cacao, chicory}
 
 class CoffeeFactory {
   static CoffeeProduct? createCoffeeProduct(CoffeeProductType type) {
@@ -43,10 +44,11 @@ class CoffeeFactory {
         return Coffee();
       case CoffeeProductType.cacao:
         return Cacao();
+      case CoffeeProductType.chicory:
+        return Chicory();
       default:
-        break;
+        throw ArgumentError();
     }
-    return null;
   }
 }
 
@@ -73,6 +75,52 @@ class WindowsDialog implements Dialog {
 class WebDialog implements Dialog {
   @override
   Button createButton() => HTMLButton();
+}
+
+
+/// One more example
+enum PizzaType {margarita, mexico, stella}
+
+abstract class Pizza {
+  final int radius = 0;
+  final String name = '';
+
+  factory Pizza(PizzaType type) {
+    switch(type) {
+      case PizzaType.margarita:
+        return Margarita();
+      case PizzaType.stella:
+        return Stella();
+      case PizzaType.mexico:
+        return Mexico();
+      default:
+        throw ArgumentError();
+    }
+  }
+}
+
+class Margarita implements Pizza {
+  @override
+  String get name => 'Margarita';
+
+  @override
+  int get radius => 10;
+}
+
+class Stella implements Pizza {
+  @override
+  String get name => 'Stella';
+
+  @override
+  int get radius => 15;
+}
+
+class Mexico implements Pizza {
+  @override
+  String get name => 'Mexico';
+
+  @override
+  int get radius => 20;
 }
 
 /*

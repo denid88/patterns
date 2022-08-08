@@ -8,8 +8,14 @@ void main(List<String> arguments) {
   // final Logistic seaLogistic = SeaLogistic();
   // roadLogistic.createTransport();
   // seaLogistic.createTransport();
-  // final coffee = CoffeeFactory.createCoffeeProduct(CoffeeProductType.coffee);
-  // final cacao = CoffeeFactory.createCoffeeProduct(CoffeeProductType.cacao);
+  // for (var value in CoffeeProductType.values) {
+  //   final coffeeProduct = CoffeeFactory.createCoffeeProduct(value);
+  //   print(coffeeProduct);
+  // }
+  // for (var value in PizzaType.values) {
+  //   var pizza = Pizza(value);
+  //   print(pizza);
+  // }
   // final webDialog = WebDialog();
   // webDialog.createButton();
   // final windowsDialog = WindowsDialog();

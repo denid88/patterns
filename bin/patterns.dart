@@ -1,6 +1,8 @@
-import 'src/creational/abstract_factory.dart';
-import 'src/creational/builder.dart';
-import 'src/creational/factory_method.dart';
+// import 'src/creational/abstract_factory.dart';
+// import 'src/creational/builder.dart';
+// import 'src/creational/factory_method.dart';
+// import 'src/creational/prototype.dart';
+// import 'src/creational/singleton.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -39,19 +41,39 @@ void main(List<String> arguments) {
   //   print('---' * 20);
   // }
   /// Builder without Director
-  var houseBuilder = HouseBuilder(100);
-  houseBuilder
-    ..setHouseExterior(HouseExterior.minimal)
-    ..setHouseInterior(HouseInterior.loft)
-    ..setHouseType(HouseType.wood);
-
-  var woodHouseWithLoftAndMinimal = House(houseBuilder);
-  print(woodHouseWithLoftAndMinimal);
-  
-  var brickHouseWithShaleAndHiTech = (houseBuilder
-    ..setHouseType(HouseType.brick)
-    ..setHouseInterior(HouseInterior.hiTech)
-    ..setHouseExterior(HouseExterior.shale)  
-  ).build();
-  print(brickHouseWithShaleAndHiTech);
+  // var houseBuilder = HouseBuilder(100);
+  // houseBuilder
+  //   ..setHouseExterior(HouseExterior.minimal)
+  //   ..setHouseInterior(HouseInterior.loft)
+  //   ..setHouseType(HouseType.wood);
+  //
+  // var woodHouseWithLoftAndMinimal = House(houseBuilder);
+  // print(woodHouseWithLoftAndMinimal);
+  //
+  // var brickHouseWithShaleAndHiTech = (houseBuilder
+  //   ..setHouseType(HouseType.brick)
+  //   ..setHouseInterior(HouseInterior.hiTech)
+  //   ..setHouseExterior(HouseExterior.shale)
+  // ).build();
+  // print(brickHouseWithShaleAndHiTech);
+  // /// Prototype
+  // var margarita = Pizza(
+  //   name: 'Margarita',
+  //   topping: <PizzaTopLevelType>[
+  //     PizzaTopLevelType.bacon,
+  //     PizzaTopLevelType.mozzarella
+  //   ],
+  // );
+  // print(margarita);
+  // print('----------------------------');
+  // final margaritaWithMushrooms = margarita.clone();
+  // margaritaWithMushrooms.topping.add(PizzaTopLevelType.mushrooms);
+  // print(margaritaWithMushrooms);
+  /// Singleton
+  // final singleton = Singleton.instance;
+  // final singleton1 = Singleton.instance;
+  //
+  // print(singleton.hashCode);
+  // print(singleton1.hashCode);
+  // print(identical(singleton, singleton1));
 }

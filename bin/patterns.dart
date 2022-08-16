@@ -4,6 +4,8 @@
 // import 'src/creational/prototype.dart';
 // import 'src/creational/singleton.dart';
 
+import 'src/structural/adapter.dart';
+
 void main(List<String> arguments) {
   /// Creational
   /// Factory Method
@@ -76,4 +78,15 @@ void main(List<String> arguments) {
   // print(singleton.hashCode);
   // print(singleton1.hashCode);
   // print(identical(singleton, singleton1));
+  /// Adapter
+  var fahrenheitOven = OriginalOven(32);
+  var celsiousOven = OvenAdapter(fahrenheitOven);
+  printTemperature(celsiousOven);
+  celsiousOven.setCelsiousTemperature(180);
+  printTemperature(celsiousOven);
+
+  final xmlHandler = XMLHandler();
+  final jsonHandler = AdapterJSONHandler(xmlHandler);
+
+  print(jsonHandler.getJSON());
 }

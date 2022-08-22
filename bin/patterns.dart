@@ -4,8 +4,10 @@
 // import 'src/creational/prototype.dart';
 // import 'src/creational/singleton.dart';
 // import 'src/structural/adapter.dart';
+// import 'src/structural/bridge.dart';
+import 'dart:math';
 
-import 'src/structural/bridge.dart';
+import 'src/structural/composite.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -115,4 +117,21 @@ void main(List<String> arguments) {
   //   roaster.turnGasValve();
   //   if (roaster.isTooHot) { roaster.loudspeaker = LoudspeakerWithAlarm(); }
   // }
+  /// Composite
+  var dough = CompoundProduct('Dough');
+  dough.addProduct(Product('flour', 3));
+  dough.addProduct(Product('egg', 23));
+  dough.addProduct(Product('salt', 1));
+  dough.addProduct(Product('sugar', 2));
+  var sauce = Product('Barbeque', 12);
+  var topping = CompoundProduct('Topping');
+  topping.addProduct(Product('dorblue', 14));
+  topping.addProduct(Product('parmesan', 12));
+  topping.addProduct(Product('mozzarella', 94));
+  topping.addProduct(Product('maasdam', 77));
+  var pizza = Pizza('4 Cheese');
+  pizza.addProduct(dough);
+  pizza.addProduct(sauce);
+  pizza.addProduct(topping);
+  pizza.cost();
 }

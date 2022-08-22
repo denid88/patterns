@@ -3,8 +3,9 @@
 // import 'src/creational/factory_method.dart';
 // import 'src/creational/prototype.dart';
 // import 'src/creational/singleton.dart';
+// import 'src/structural/adapter.dart';
 
-import 'src/structural/adapter.dart';
+import 'src/structural/bridge.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -79,14 +80,39 @@ void main(List<String> arguments) {
   // print(singleton1.hashCode);
   // print(identical(singleton, singleton1));
   /// Adapter
-  var fahrenheitOven = OriginalOven(32);
-  var celsiousOven = OvenAdapter(fahrenheitOven);
-  printTemperature(celsiousOven);
-  celsiousOven.setCelsiousTemperature(180);
-  printTemperature(celsiousOven);
-
-  final xmlHandler = XMLHandler();
-  final jsonHandler = AdapterJSONHandler(xmlHandler);
-
-  print(jsonHandler.getJSON());
+  // var fahrenheitOven = OriginalOven(32);
+  // var celsiousOven = OvenAdapter(fahrenheitOven);
+  // printTemperature(celsiousOven);
+  // celsiousOven.setCelsiousTemperature(180);
+  // printTemperature(celsiousOven);
+  //
+  // final xmlHandler = XMLHandler();
+  // final jsonHandler = AdapterJSONHandler(xmlHandler);
+  //
+  // print(jsonHandler.getJSON());
+  /// Bridge
+  // var firstPizza = Pizza('Margarita', 10, 220);
+  // var secondPizza = Pizza('Salami', 9, 180);
+  //
+  // var implementor = ClassicOvenImplementor(10);
+  // var oven = Oven(implementor);
+  //
+  // print('Implementor type: ${oven.getImplementorType()}');
+  // oven.cookingPizza(firstPizza);
+  // oven.cookingPizza(secondPizza);
+  // // change new implementation
+  //
+  // var newImplementor = ElectricalOvenImplementor(oven.getTemperature());
+  // firstPizza = Pizza('Margarita', 9, 225);
+  // secondPizza = Pizza('Salami', 10, 175);
+  // oven.changeImplementor(newImplementor);
+  //
+  // print('Implementor type: ${oven.getImplementorType()}');
+  // oven.cookingPizza(firstPizza);
+  // oven.cookingPizza(secondPizza);
+  // var roaster = CoffeeRoaster();
+  // for (var i=0; i < 3; i++) {
+  //   roaster.turnGasValve();
+  //   if (roaster.isTooHot) { roaster.loudspeaker = LoudspeakerWithAlarm(); }
+  // }
 }

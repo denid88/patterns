@@ -7,7 +7,8 @@
 // import 'src/structural/bridge.dart';
 import 'dart:math';
 
-import 'src/structural/composite.dart';
+//import 'src/structural/composite.dart';
+//import 'src/structural/decorator.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -118,20 +119,28 @@ void main(List<String> arguments) {
   //   if (roaster.isTooHot) { roaster.loudspeaker = LoudspeakerWithAlarm(); }
   // }
   /// Composite
-  var dough = CompoundProduct('Dough');
-  dough.addProduct(Product('flour', 3));
-  dough.addProduct(Product('egg', 23));
-  dough.addProduct(Product('salt', 1));
-  dough.addProduct(Product('sugar', 2));
-  var sauce = Product('Barbeque', 12);
-  var topping = CompoundProduct('Topping');
-  topping.addProduct(Product('dorblue', 14));
-  topping.addProduct(Product('parmesan', 12));
-  topping.addProduct(Product('mozzarella', 94));
-  topping.addProduct(Product('maasdam', 77));
-  var pizza = Pizza('4 Cheese');
-  pizza.addProduct(dough);
-  pizza.addProduct(sauce);
-  pizza.addProduct(topping);
-  pizza.cost();
+  // var dough = CompoundProduct('Dough');
+  // dough.addProduct(Product('flour', 3));
+  // dough.addProduct(Product('egg', 23));
+  // dough.addProduct(Product('salt', 1));
+  // dough.addProduct(Product('sugar', 2));
+  // var sauce = Product('Barbeque', 12);
+  // var topping = CompoundProduct('Topping');
+  // topping.addProduct(Product('dorblue', 14));
+  // topping.addProduct(Product('parmesan', 12));
+  // topping.addProduct(Product('mozzarella', 94));
+  // topping.addProduct(Product('maasdam', 77));
+  // var pizza = Pizza('4 Cheese');
+  // pizza.addProduct(dough);
+  // pizza.addProduct(sauce);
+  // pizza.addProduct(topping);
+  // pizza.cost();
+  /// Decorator
+  // var pizzaBase = PizzaBase(3);
+  // print('Cтоимость основы пиццы = ${pizzaBase.cost()}');
+  // var margarita = PizzaMargarita(10, pizzaBase);
+  // var salami = PizzaSalami(7, pizzaBase);
+  //
+  // printPizzaInfo(margarita);
+  // printPizzaInfo(salami);
 }

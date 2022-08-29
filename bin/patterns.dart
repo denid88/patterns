@@ -10,7 +10,8 @@
 //import 'src/structural/composite.dart';
 //import 'src/structural/decorator.dart';
 
-import 'src/structural/flyweight.dart';
+// import 'src/structural/flyweight.dart';
+import 'src/structural/proxy.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -156,8 +157,33 @@ void main(List<String> arguments) {
   // client1.eatingFood();
   // client2.eatingFood();
   /// FlyWeight
+  // var flyweightFactory = FlyWeightFactory();
+  // var pizzaMaker = PizzaOrderMaker(flyweightFactory);
+  // var sharedState = <PizzaOrderFlyWeight>[
+  //   PizzaOrderFlyWeight('Big Pizza', 30),
+  //   PizzaOrderFlyWeight('Medium Pizza', 20),
+  //   PizzaOrderFlyWeight('Small Pizza', 10),
+  // ];
+  //
+  // var uniqueStates = <String>['Margarita', 'Salami', '4 Cheese'];
+  //
+  // var orders = [
+  //   for (var name in uniqueStates)
+  //     for (var shState in sharedState) pizzaMaker.makePizzaOrder(name, shState)
+  // ];
+  //
+  // print('Number of pizzas: ${orders.length}');
+  // print('Number of sharedState: ${flyweightFactory.total}');
+  //
+  // orders.asMap().forEach((key, value) {
+  //   print('-' * 20);
+  //   print('Pizza number is the list $key');
+  //   print(value);
+  // });
+  /// Proxy
   var flyweightFactory = FlyWeightFactory();
   var pizzaMaker = PizzaOrderMaker(flyweightFactory);
+  var pizzaMakerProxy = ProxyOrderMaker(pizzaMaker);
   var sharedState = <PizzaOrderFlyWeight>[
     PizzaOrderFlyWeight('Big Pizza', 30),
     PizzaOrderFlyWeight('Medium Pizza', 20),
@@ -168,15 +194,9 @@ void main(List<String> arguments) {
 
   var orders = [
     for (var name in uniqueStates)
-      for (var shState in sharedState) pizzaMaker.makePizzaOrder(name, shState)
+      for (var shState in sharedState) pizzaMakerProxy.makePizzaOrder(name, shState)
   ];
 
   print('Number of pizzas: ${orders.length}');
   print('Number of sharedState: ${flyweightFactory.total}');
-
-  orders.asMap().forEach((key, value) {
-    print('-' * 20);
-    print('Pizza number is the list $key');
-    print(value);
-  });
 }

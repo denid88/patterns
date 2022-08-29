@@ -5,8 +5,8 @@
 // import 'src/creational/singleton.dart';
 // import 'src/structural/adapter.dart';
 // import 'src/structural/bridge.dart';
-import 'dart:math';
 
+//import 'src/structural/facade.dart';
 //import 'src/structural/composite.dart';
 //import 'src/structural/decorator.dart';
 
@@ -143,4 +143,14 @@ void main(List<String> arguments) {
   //
   // printPizzaInfo(margarita);
   // printPizzaInfo(salami);
+  /// Facade
+  // var pizzeria = PizzeriaFacade();
+  // var client1 = Client('Alex');
+  // var client2 = Client('Ivan');
+  // client1.requestMenu(pizzeria.getMenu(MenuType.mixed));
+  // pizzeria.takeOrder(client1);
+  // client2.requestMenu(pizzeria.getMenu(MenuType.vegan));
+  // pizzeria.takeOrder(client2);
+  // client1.eatingFood();
+  // client2.eatingFood();
 }

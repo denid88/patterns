@@ -11,6 +11,7 @@
 //import 'src/structural/decorator.dart';
 
 // import 'src/structural/flyweight.dart';
+import 'src/behavioral/command.dart';
 import 'src/behavioral/cor.dart';
 import 'src/structural/proxy.dart';
 
@@ -216,4 +217,31 @@ void main(List<String> arguments) {
   // requestList = <String>['The world on a sliver platter!'];
   // requestOrder = RequestOrder(requestList, OrderType.none);
   // requestHandle(waiter, requestOrder);
+  /// Command
+  // final chief = Chief();
+  // final assistant = ChiefAssistant();
+  // final oven = Oven();
+  // final pizzeria = Pizzeria();
+  // pizzeria.addCommand(PrepareDoughCommand(assistant));
+  // pizzeria.addCommand(MakePizzaBaseCommand(chief));
+  // pizzeria.addCommand(PrepareSauceCommand(assistant));
+  // pizzeria.addCommand(AppliedSauceCommand(chief));
+  // pizzeria.addCommand(PrepareOvenCommand(oven));
+  // pizzeria.addCommand(PrepareToppingCommand(assistant));
+  // pizzeria.addCommand(AddToppingCommand(chief));
+  // pizzeria.addCommand(CookingPizzaCommand(oven));
+  // pizzeria.addCommand(BonAppetitCommand(chief));
+  // pizzeria.cooking();
+
+  //////////////////////////////////////////////////////////////////////////////
+  // var myFavoriteLamp = Light();
+  // var iotLightSwitch = LightSwitch(myFavoriteLamp);
+  //
+  // iotLightSwitch.perform("on");
+  // iotLightSwitch.perform("off");
+  // iotLightSwitch.perform("blink");
+  // iotLightSwitch.perform("on");
+  //
+  // print("\r\n*** Fancy IoT Switch Logs ***\r\n${iotLightSwitch.history}");
+
 }

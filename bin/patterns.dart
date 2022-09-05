@@ -11,6 +11,7 @@
 //import 'src/structural/decorator.dart';
 
 // import 'src/structural/flyweight.dart';
+import 'src/behavioral/cor.dart';
 import 'src/structural/proxy.dart';
 
 void main(List<String> arguments) {
@@ -181,22 +182,38 @@ void main(List<String> arguments) {
   //   print(value);
   // });
   /// Proxy
-  var flyweightFactory = FlyWeightFactory();
-  var pizzaMaker = PizzaOrderMaker(flyweightFactory);
-  var pizzaMakerProxy = ProxyOrderMaker(pizzaMaker);
-  var sharedState = <PizzaOrderFlyWeight>[
-    PizzaOrderFlyWeight('Big Pizza', 30),
-    PizzaOrderFlyWeight('Medium Pizza', 20),
-    PizzaOrderFlyWeight('Small Pizza', 10),
-  ];
-
-  var uniqueStates = <String>['Margarita', 'Salami', '4 Cheese'];
-
-  var orders = [
-    for (var name in uniqueStates)
-      for (var shState in sharedState) pizzaMakerProxy.makePizzaOrder(name, shState)
-  ];
-
-  print('Number of pizzas: ${orders.length}');
-  print('Number of sharedState: ${flyweightFactory.total}');
+  // var flyweightFactory = FlyWeightFactory();
+  // var pizzaMaker = PizzaOrderMaker(flyweightFactory);
+  // var pizzaMakerProxy = ProxyOrderMaker(pizzaMaker);
+  // var sharedState = <PizzaOrderFlyWeight>[
+  //   PizzaOrderFlyWeight('Big Pizza', 30),
+  //   PizzaOrderFlyWeight('Medium Pizza', 20),
+  //   PizzaOrderFlyWeight('Small Pizza', 10),
+  // ];
+  //
+  // var uniqueStates = <String>['Margarita', 'Salami', '4 Cheese'];
+  //
+  // var orders = [
+  //   for (var name in uniqueStates)
+  //     for (var shState in sharedState) pizzaMakerProxy.makePizzaOrder(name, shState)
+  // ];
+  //
+  // print('Number of pizzas: ${orders.length}');
+  // print('Number of sharedState: ${flyweightFactory.total}');
+  /// Chain of Responsibility
+  // var kitchen = KitchenHandler();
+  // var bar = BarmanHandler(kitchen);
+  // var waiter = WaiterHandler(bar);
+  //
+  // var requestList = <String>['Borsch', 'Naval macaroshki'];
+  // var requestOrder = RequestOrder(requestList, OrderType.notVegan);
+  // requestHandle(waiter, requestOrder);
+  //
+  // requestList = <String>['Blood Merry', 'Cognac', 'Whiskey'];
+  // requestOrder = RequestOrder(requestList, OrderType.binge);
+  // requestHandle(waiter, requestOrder);
+  //
+  // requestList = <String>['The world on a sliver platter!'];
+  // requestOrder = RequestOrder(requestList, OrderType.none);
+  // requestHandle(waiter, requestOrder);
 }

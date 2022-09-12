@@ -17,6 +17,7 @@
 
 import 'src/behavioral/iterator.dart';
 import 'src/behavioral/mediator.dart';
+import 'src/behavioral/memento.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -279,4 +280,13 @@ void main(List<String> arguments) {
   // for (var person in mixer) {
   //   print("${person.name} heard \"${person.state}\".");
   // }
+  /// Memento
+  // final careTaker = Caretaker([]);
+  // final creator = Creator();
+  //
+  // careTaker.addMemento(creator.save('hello'));
+  // careTaker.addMemento(creator.save('hello world'));
+  // careTaker.addMemento(creator.save('hello world!'));
+  //
+  // print(creator.restore(careTaker.getMemento(1)));
 }

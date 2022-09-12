@@ -16,6 +16,7 @@
 // import 'src/structural/proxy.dart';
 
 import 'src/behavioral/iterator.dart';
+import 'src/behavioral/mediator.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -256,5 +257,26 @@ void main(List<String> arguments) {
   // final pizzasMenus = PizzaIterator(pizzas: ['Margarita', 'Italy', 'Cheeses']);
   // while (pizzasMenus.hasNext()) {
   //   print(pizzasMenus.next());
+  // }
+  /// Mediator
+  // final mediator = OfficialDealer([]);
+  // final yauhen = Customer(name: 'Yauhen', dealerMediator: mediator);
+  // final valera = Customer(name: 'Valera', dealerMediator: mediator);
+  //
+  // yauhen.makeOrder('Tesla', 'With autopilot');
+  // valera.makeOrder('Audio', 'Parktronic');
+  //
+  // mediator.getCustomerList();
+
+  // var curly = Attendee("Curly");
+  // var larry = Attendee("Larry");
+  // var my = Attendee("I prefer not to disclose my name");
+  // var mixer = List<Attendee>.from([curly, larry, my]);
+  // var publicAnnouncementSystem = Mediator(mixer);
+  //
+  // publicAnnouncementSystem.update("Do NOT eat the shrip tacos!");
+  //
+  // for (var person in mixer) {
+  //   print("${person.name} heard \"${person.state}\".");
   // }
 }

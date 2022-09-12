@@ -11,9 +11,11 @@
 //import 'src/structural/decorator.dart';
 
 // import 'src/structural/flyweight.dart';
-import 'src/behavioral/command.dart';
-import 'src/behavioral/cor.dart';
-import 'src/structural/proxy.dart';
+// import 'src/behavioral/command.dart';
+// import 'src/behavioral/cor.dart';
+// import 'src/structural/proxy.dart';
+
+import 'src/behavioral/iterator.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -243,5 +245,16 @@ void main(List<String> arguments) {
   // iotLightSwitch.perform("on");
   //
   // print("\r\n*** Fancy IoT Switch Logs ***\r\n${iotLightSwitch.history}");
-
+  /// Iterator
+  // var rainbowColors = RainbowIterator();
+  // while(rainbowColors.moveNext()) {
+  //   print(rainbowColors.current);
+  // }
+  //
+  // print('-------------------------------------------------------------------');
+  //
+  // final pizzasMenus = PizzaIterator(pizzas: ['Margarita', 'Italy', 'Cheeses']);
+  // while (pizzasMenus.hasNext()) {
+  //   print(pizzasMenus.next());
+  // }
 }

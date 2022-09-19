@@ -296,8 +296,6 @@ void main(List<String> arguments) {
   final bmwNewsChannel = BMWNewsChannel();
   autoNews.register(audiNewsChannel);
   autoNews.register(bmwNewsChannel);
-  autoNews.unregister(bmwNewsChannel);
 
   autoNews.setNews('The Last Internal-Combustion-Engine Cars: Window Shop with Car and Driver');
-  autoNews.setNews('Ford Super Duty Next-Gen Truck Teased');
 }

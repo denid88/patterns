@@ -12,7 +12,7 @@
 
 abstract class AutoNewsChannel {
   void inform(String message) {
-    print('$runtimeType published: $message');
+    print('$runtimeType: $message');
   }
 }
 

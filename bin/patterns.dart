@@ -18,6 +18,7 @@
 import 'src/behavioral/iterator.dart';
 import 'src/behavioral/mediator.dart';
 import 'src/behavioral/memento.dart';
+import 'src/behavioral/observer.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -289,4 +290,14 @@ void main(List<String> arguments) {
   // careTaker.addMemento(creator.save('hello world!'));
   //
   // print(creator.restore(careTaker.getMemento(1)));
+  /// Observer
+  final autoNews = AutoNews();
+  final audiNewsChannel = AudiNewsChannel();
+  final bmwNewsChannel = BMWNewsChannel();
+  autoNews.register(audiNewsChannel);
+  autoNews.register(bmwNewsChannel);
+  autoNews.unregister(bmwNewsChannel);
+
+  autoNews.setNews('The Last Internal-Combustion-Engine Cars: Window Shop with Car and Driver');
+  autoNews.setNews('Ford Super Duty Next-Gen Truck Teased');
 }

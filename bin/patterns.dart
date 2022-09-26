@@ -14,11 +14,11 @@
 // import 'src/behavioral/command.dart';
 // import 'src/behavioral/cor.dart';
 // import 'src/structural/proxy.dart';
-
-import 'src/behavioral/iterator.dart';
-import 'src/behavioral/mediator.dart';
-import 'src/behavioral/memento.dart';
-import 'src/behavioral/observer.dart';
+// import 'src/behavioral/iterator.dart';
+// import 'src/behavioral/mediator.dart';
+// import 'src/behavioral/memento.dart';
+// import 'src/behavioral/observer.dart';
+import 'src/behavioral/state.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -291,11 +291,26 @@ void main(List<String> arguments) {
   //
   // print(creator.restore(careTaker.getMemento(1)));
   /// Observer
-  final autoNews = AutoNews();
-  final audiNewsChannel = AudiNewsChannel();
-  final bmwNewsChannel = BMWNewsChannel();
-  autoNews.register(audiNewsChannel);
-  autoNews.register(bmwNewsChannel);
+  // final autoNews = AutoNews();
+  // final audiNewsChannel = AudiNewsChannel();
+  // final bmwNewsChannel = BMWNewsChannel();
+  // autoNews.register(audiNewsChannel);
+  // autoNews.register(bmwNewsChannel);
+  //
+  // autoNews.setNews('The Last Internal-Combustion-Engine Cars: Window Shop with Car and Driver');
+  /// State
+  // final myOrder = Order(state: WaitingForPayment());
+  // print(myOrder.state.name);
+  // myOrder.nextState();
+  // print(myOrder.state.name);
+  // myOrder.nextState();
+  // print(myOrder.state.name);
 
-  autoNews.setNews('The Last Internal-Combustion-Engine Cars: Window Shop with Car and Driver');
+  // var lightSwitch = Stateful(state: StatusOff());
+  // print("The light switch is ${lightSwitch.state}.");
+  // print("Toggling the light switch...");
+  // lightSwitch.touch();
+  // print("The light switch is ${lightSwitch.state}.");
+  // lightSwitch.touch();
+  // print("The light switch is ${lightSwitch.state}.");
 }

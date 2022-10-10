@@ -20,6 +20,7 @@
 // import 'src/behavioral/observer.dart';
 import 'src/behavioral/state.dart';
 import 'src/behavioral/strategy.dart';
+import 'src/behavioral/template_method.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -329,11 +330,17 @@ void main(List<String> arguments) {
   //   print("Hey ${person.name}, whatcha drinkin' over there?");
   //   print("I'm enjoying ${person.preferredDrink.announce(roastOfTheDay)}!\r\n");
   // }
-  final filter = Filter();
-  filter.filterStrategy = SepiaFilter();
-  filter.applyFilter();
-  filter.filterStrategy = BlackWhiteFilter();
-  filter.applyFilter();
-  filter.filterStrategy = ExpositionFilter();
-  filter.applyFilter();
+  // final filter = Filter();
+  // filter.filterStrategy = SepiaFilter();
+  // filter.applyFilter();
+  // filter.filterStrategy = BlackWhiteFilter();
+  // filter.applyFilter();
+  // filter.filterStrategy = ExpositionFilter();
+  // filter.applyFilter();
+  /// Template method
+  // var teslaCar = TeslaBuilder();
+  // var bmwCar = BMWBuilder();
+  //
+  // teslaCar.build();
+  // bmwCar.build();
 }

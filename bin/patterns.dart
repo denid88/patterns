@@ -21,6 +21,7 @@
 import 'src/behavioral/state.dart';
 import 'src/behavioral/strategy.dart';
 import 'src/behavioral/template_method.dart';
+import 'src/behavioral/visitor.dart';
 
 void main(List<String> arguments) {
   /// Creational
@@ -343,4 +344,11 @@ void main(List<String> arguments) {
   //
   // teslaCar.build();
   // bmwCar.build();
+  /// Visitor
+  final cars = [BMW(), Audi(), Tesla()];
+  final carVisitor = Visitor();
+  cars.forEach((car) {
+    carVisitor.visit(car);
+  });
+
 }
